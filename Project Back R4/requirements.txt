@@ -1,0 +1,23 @@
+inside admin
+--------
+1- create registration and login system
+2- login/register by login.php
+3- show the full name of the user at the top right and top left of the admin panel on all pages.
+4- show users details in users.php.
+5- if we press edit, we can display user data and update it from edituser.php
+6- directly add user from addUser.php
+7- add categories for the cars from addCategory.php
+8- show categories list on categories.php
+9- if we press delete we can remove the category only if it has no data in the cars table.
+10- edit the category if we press edit using editCategory.php.
+11- add carfrom addCar.php
+12- show cars list on cars.php
+13- if we press delete we can remove the car.
+14- edit the car if we press edit using editCar.php
+
+
+main website
+--------
+1- inside index.php display latest 6 cars using title, image, price, Luggage, Doors, Passenger and short description max 100 char.
+2- when we press any car we can display the car details on single.php
+3- at the right, we should display all categories name from the DB.

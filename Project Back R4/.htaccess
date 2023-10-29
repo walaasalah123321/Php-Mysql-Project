@@ -1,0 +1,6 @@
+RewriteEngine on
+ErrorDocument 404   http://localhost/medical/404.php
+
+# DISABLE DIRECTORY INDEXES
+
+Options -Indexes
