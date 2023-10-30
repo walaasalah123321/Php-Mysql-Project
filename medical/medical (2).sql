@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Generation Time: Oct 29, 2023 at 12:24 AM
+-- Generation Time: Oct 30, 2023 at 03:37 PM
 -- Server version: 10.4.27-MariaDB
 -- PHP Version: 8.2.0
 
@@ -63,14 +63,11 @@ CREATE TABLE `city` (
 --
 
 INSERT INTO `city` (`city_id`, `city_name`, `regData`) VALUES
-(10, 'Port Said', '2023-10-22 15:03:07'),
 (11, 'Nasser city', '2023-10-22 15:03:11'),
-(12, 'tema', '2023-10-22 15:03:14'),
 (13, 'tahta', '2023-10-22 15:03:16'),
 (14, 'Port foud', '2023-10-22 15:03:19'),
 (15, 'Port Said', '2023-10-22 15:03:49'),
-(16, 'tema', '2023-10-22 15:04:10'),
-(17, 'Port foud', '2023-10-22 15:04:18');
+(16, 'tema', '2023-10-22 15:04:10');
 
 -- --------------------------------------------------------
 
@@ -82,7 +79,7 @@ CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
   `order_name` varchar(20) NOT NULL,
   `order_mobile` varchar(20) NOT NULL,
-  `order_email` varchar(20) NOT NULL,
+  `order_email` varchar(50) NOT NULL,
   `order_nodes` varchar(1000) NOT NULL,
   `order_serv_id` int(11) NOT NULL,
   `order_city_id` int(11) NOT NULL,
@@ -94,7 +91,12 @@ CREATE TABLE `orders` (
 --
 
 INSERT INTO `orders` (`order_id`, `order_name`, `order_mobile`, `order_email`, `order_nodes`, `order_serv_id`, `order_city_id`, `regData`) VALUES
-(2, 'walaa salah', '0123456879', 'www12332@gmail.com', 'kujyhtgrfdes', 17, 16, '2023-10-22 17:54:37');
+(14, 'mahmoud salah', '0123457835', 'mahmoud@gmail.com', '', 16, 11, '2023-10-30 14:15:44'),
+(15, 'mahmoud salah', '0123457835', 'walaasalah056@gmail.com', '', 16, 11, '2023-10-30 14:17:25'),
+(16, 'walaa salah', '0123457835', 'walaasalah92056@gmail.com', '', 13, 16, '2023-10-30 14:23:24'),
+(17, 'diann', '0123457835', 'dinaa@gmail.com', '', 16, 13, '2023-10-30 14:24:08'),
+(18, 'sanaa', '0123457835', 'sanaa@gmail.com', '', 16, 11, '2023-10-30 14:25:44'),
+(20, 'manar', '0123457835', 'manar@gmail.com', '', 16, 14, '2023-10-30 14:30:58');
 
 -- --------------------------------------------------------
 
@@ -132,15 +134,14 @@ ALTER TABLE `admin`
 -- Indexes for table `city`
 --
 ALTER TABLE `city`
-  ADD PRIMARY KEY (`city_id`);
+  ADD PRIMARY KEY (`city_id`),
+  ADD UNIQUE KEY `city_name` (`city_name`);
 
 --
 -- Indexes for table `orders`
 --
 ALTER TABLE `orders`
-  ADD PRIMARY KEY (`order_id`),
-  ADD UNIQUE KEY `order_serv_id` (`order_serv_id`),
-  ADD UNIQUE KEY `order_city_id` (`order_city_id`);
+  ADD PRIMARY KEY (`order_id`);
 
 --
 -- Indexes for table `service`
@@ -163,19 +164,19 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT for table `city`
 --
 ALTER TABLE `city`
-  MODIFY `city_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `city_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- AUTO_INCREMENT for table `service`
 --
 ALTER TABLE `service`
-  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `service_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
 
 --
 -- Constraints for dumped tables
