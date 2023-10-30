@@ -1,0 +1,135 @@
+.font-1
+{
+    font-family: 'Open Sans', sans-serif !important;
+}
+.font-2
+{
+    font-family: 'Montserrat', sans-serif !important;
+}
+.cont-main
+{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cont-login 
+{
+    background: cornflowerblue;
+    height: 100vh;
+}
+.cont-login form 
+{
+    width: 70%;
+}
+
+.cont-main form 
+{
+    border: 2px solid #222;
+    padding: 25px;
+    background: rgba(0, 126, 255, 0.5);
+    border-radius: 15px;
+}
+.cont-main label
+{
+    color: white;
+    font-weight: bold;
+}
+.cont-main form select 
+{
+    background: #2da9a3;
+    color: #fff;
+    border: 1px solid #222;
+}
+
+.bg-base
+{
+    background: #2da9a3;
+}
+
+
+@media only screen and (max-width: 700px) 
+{
+    .cont-main
+    {
+        height: auto;
+    }
+}
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+.body-home, .body-login {
+	background: url(../../img/bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+}
+.black-fill {
+	background: rgba(0,0,0, 0.7);
+	min-height: 100vh;
+}
+#homeNav {
+	background: rgba(255,255,255, 0.5) !important;
+}
+.welcome-text {
+	min-height: 80vh;
+}
+.welcome-text img {
+	width: 100px;
+}
+.welcome-text h4 {
+	color: #eee;
+	font-size: 51px;
+	font-family: 'Lobster', cursive;
+
+}
+.welcome-text p {
+	color: #222;
+	background: rgba(255,255,255, 0.5);
+	padding: 5px;
+	border-radius: 4px;
+}
+#about {
+	min-height: 100vh;
+}
+#about .card-1{
+	max-width: 600px;
+	width: 90%;
+	background: rgba(255,255,255, 0.5);
+	padding: 20px;
+	border-radius: 5px;
+}
+#about .card-1 h5{
+	font-family: 'Lobster', cursive;
+	font-size: 28px;
+}
+
+#contact {
+	min-height: 100vh;
+}
+#contact form{
+	max-width: 600px;
+	width: 90%;
+	background: rgba(255,255,255, 0.5);
+	padding: 20px;
+	border-radius: 5px;
+}
+#contact form h3 {
+	text-align: center;
+	font-family: 'Lobster', cursive;
+}
+textarea {
+	resize: none;
+}
+
+.login {
+	max-width: 500px;
+	width: 90%;
+	background: rgba(255,255,255, 0.5);
+	padding: 10px;
+	border-radius: 10px;
+}
+.login h3{
+	text-align: center;
+	font-size: 40px;
+}
+.w-450 {
+	width: 450px;
+}
