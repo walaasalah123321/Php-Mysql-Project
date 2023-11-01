@@ -15,7 +15,6 @@ if(isset($_GET["id"])){
 		$image=$result["image"];
 		
 			if($_SERVER["REQUEST_METHOD"]==="POST"){
-				if(isset($_POST["updata"])){
 					include_once("include/carPost.php");
 					$oldImage=$_POST["oldImage"];
 					include_once("include/updateImage.php");
@@ -28,8 +27,7 @@ if(isset($_GET["id"])){
 						catch(PDOException $e){
 							echo "Connection failed: " . $e->getMessage();
 						}
-				}
-				else{ $success_message="cancled  seccessfuly";}
+				
 				include_once("../function/massage.php");
 
 			}		
@@ -165,7 +163,7 @@ include_once("include/Nav.php");?>
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="submit" name="cancle";>Cancel</button>
+											<a href="cars.php" class="btn btn-primary" type="button" name="cancle">Cancel</a>
 												<button type="submit" class="btn btn-success" name="updata">Update</button>
 											</div>
 										</div>

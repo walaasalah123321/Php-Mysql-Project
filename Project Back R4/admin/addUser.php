@@ -32,9 +32,6 @@ if(isset($_POST["add"])){
       catch(PDOException $e){
           echo "Connection failed: " . $e->getMessage();
       }
-}if(isset($_POST["cancle"])){
-	$success_message="cancled add";
-
 }
 
 include_once("../function/massage.php");
@@ -125,7 +122,8 @@ include_once("include/Nav.php");?>
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="submit" name="cancle">Cancel</button>
+											     <a href="users.php" class="btn btn-primary" type="button" name="cancle";>Cancel</a>
+
 												<button type="submit" class="btn btn-success"  name="add">Add</button>
 											</div>
 										</div>

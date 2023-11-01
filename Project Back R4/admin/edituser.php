@@ -13,7 +13,7 @@ if(isset($_GET["id"])){
 	($active)?$active=1:$active=0;
 	if($_SERVER["REQUEST_METHOD"]=="POST"){
 		try{
-			if(isset($_POST["updata"])){
+			
 				$user=$_POST["user-name"];
 				$full=$_POST["full_name"];
 				$email=$_POST["email"];
@@ -27,11 +27,6 @@ if(isset($_GET["id"])){
 				$stm=$conn->prepare($Sql);
 				$stm->execute([$full ,$user,$email,$password,$active,$id]);
 				$success_message="updata seccessfuly";
-			}
-			else{ $success_message="cancled updata seccessfuly";}
-			// to display massages 
-		//include_once("../function/massage.php");
-
 		}
 		catch(PDOException $e){
 			echo "Connection failed: " . $e->getMessage();
@@ -131,7 +126,8 @@ include_once("include/Nav.php");
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="submit" name="cancle">Cancel</button>
+										     	<a href="users.php" class="btn btn-primary" type="button" name="cancle";>Cancel</a>
+
 												<button type="submit" class="btn btn-success" name="updata">Update</button>
 											</div>
 										</div>

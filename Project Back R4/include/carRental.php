@@ -10,7 +10,6 @@ if(isset($_GET["id"])){
     $price=$result["Price"];
     $image=$result["image"];
     $categorycar=getRow('category','id',$category)["catagory"];
-}
 ?>
 <div class="site-section">
       <div class="container">
@@ -103,3 +102,9 @@ if(isset($_GET["id"])){
             <div class="pt-5">
               <p>Category:  <a href="#"><?php echo $categorycar?></a></p>
             </div>
+<?php }else{
+     header("location:index.php");
+}
+
+
+?>

@@ -4,8 +4,7 @@ include_once("include/conn.php");
 include_once("include/logged.php");
 
 if($_SERVER["REQUEST_METHOD"]=="POST"){
-	
-		if(isset($_POST["add"])){
+
 			include_once("include/carPost.php");
 			// check before add car is already exists or not
 			if($row>0){
@@ -24,10 +23,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
 				catch(PDOException $e){
 					echo "Connection failed: " . $e->getMessage();
 				}
-			}
-			else{ $error_message="pleace choose category for car";}
+			
 		}
-		else{ $success_message="cancled  seccessfuly";}	
+		else{ header("location:cars.php");}	
 include_once("../function/massage.php");
 }
 	
@@ -155,8 +153,9 @@ include_once("include/Nav.php");?>
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="submit" name="cancle">Cancel</button>
-												<button type="submit" class="btn btn-success"  name="add">Add</button>
+											<a href="cars.php" class="btn btn-primary" type="button" name="cancle";>Cancel</a>
+
+											<button type="submit" class="btn btn-success"  name="add">Add</button>
 											</div>
 										</div>
 

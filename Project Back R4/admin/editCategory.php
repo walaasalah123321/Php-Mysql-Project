@@ -9,7 +9,7 @@ if(isset($_GET["id"])){
 	$category=$result["catagory"];
 	if($_SERVER["REQUEST_METHOD"]=="POST"){
 		try{
-			if(isset($_POST["updata"])){
+			
 				$category=$_POST["category"];
 				$get=getRow('category','catagory',$category);
 				// check before updata category is category already exists or not 
@@ -23,8 +23,7 @@ if(isset($_GET["id"])){
 					$success_message="updata seccessfuly";
 				}
 				
-			}
-			else{ $success_message="cancled updata seccessfuly";}
+			
 		}
 		catch(PDOException $e){
 			echo "Connection failed: " . $e->getMessage();
@@ -91,7 +90,8 @@ include_once("include/Nav.php");?>
 										<div class="ln_solid"></div>
 										<div class="item form-group">
 											<div class="col-md-6 col-sm-6 offset-md-3">
-												<button class="btn btn-primary" type="submit" name="cancle">Cancel</button>
+											   <a href="categories.php" class="btn btn-primary" type="button" name="cancle";>Cancel</a>
+
 												<button type="submit" class="btn btn-success" name="updata">Update</button>
 											</div>
 										</div>
