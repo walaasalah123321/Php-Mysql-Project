@@ -1,5 +1,4 @@
 <?php 
-include_once("include/logged.php");
 // echo $_SESSION["admin"];
 if($_SESSION["admin"]==0){
   header("location:../404.php");

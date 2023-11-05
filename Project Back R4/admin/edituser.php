@@ -19,7 +19,7 @@ if(isset($_GET["id"])){
 				$email=$_POST["email"];
 				
 				$newpass=$_POST["password"];
-				if(!password_verify($newpass,$password)){
+				if($newpass!=$password){
 					$password=password_hash($newpass,PASSWORD_DEFAULT);
 				}
 				isset($_POST["active"])?$active=1:$active=0;
